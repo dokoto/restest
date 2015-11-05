@@ -1,0 +1,37 @@
+{
+  "name": "restest",
+  "version": "1.0.0",
+  "description": "Test environment for NodeJS RESTFul services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dokoto/restest.git"
+  },
+  "keywords": [
+    "RESTFul",
+    "NodeJS",
+    "ExpressJS"
+  ],
+  "author": "manuel.alfaro.sierra@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dokoto/restest/issues"
+  },
+  "homepage": "https://github.com/dokoto/restest",
+  "devDependencies": {
+    "body-parser": "^1.14.0",
+    "express": "^4.13.3",
+    "express-cluster": "0.0.4",
+    "file-stream-rotator": "0.0.6",
+    "log4js": "^0.6.27",
+    "method-override": "^2.3.5",
+    "q": "^1.4.1",
+    "randomstring": "^1.1.0",
+    "request": "^2.64.0",
+    "shelljs": "^0.5.3",
+    "underscore": "^1.8.3"
+  }
+}
