@@ -51,7 +51,7 @@ var Configurator = (function () {
   }
 
   function _showHelp() {
-    console.log('$> owld [options]');
+    console.log('$> restestd [options]');
     console.log('--nocluster [default cluster is on]');
   }
 
