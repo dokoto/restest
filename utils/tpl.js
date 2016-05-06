@@ -1,27 +1,19 @@
 'use strict';
 
-var _ = require('underscore');
-
-var Tpl = (function () {
+var Tpl = (function() {
 
   //*****************************************************
   // PRIVATE
   //*****************************************************
-  var _self = null;
-  
-  function _compile (template, params) {
-    var compiled = _.template(template);
-    return compiled(params);
-  }
+  var _ = require('underscore');
 
   //*****************************************************
   // PUBLIC
   //*****************************************************
   function tpl() {
-    _self = this;
   }
 
-  tpl.prototype.fromString = function (template, params) {
+  tpl.prototype.fromString = function(template, params) {
     if (typeof template !== 'object' && typeof template !== 'string') {
       throw new Error('"template" param must be object or string');
     }
@@ -30,17 +22,21 @@ var Tpl = (function () {
       template = JSON.stringify(template);
     }
 
-    return _compile(template, params);
+    return this._compile(template, params);
   };
 
-  tpl.prototype.fromFile = function (path, params) {
+  tpl.prototype.fromFile = function(path, params) {
     var template = require(path);
     if (typeof template === 'object') {
       template = JSON.stringify(template);
     }
-    return _compile(template, params)
+    return this._compile(template, params)
   };
 
+  tpl.prototype._compile = function(template, params) {
+    var compiled = _.template(template);
+    return compiled(params);
+  }
 
   return tpl;
 
@@ -48,7 +44,7 @@ var Tpl = (function () {
 
 
 module.exports = {
-  create: function () {
+  create: function() {
     return new Tpl();
   }
 

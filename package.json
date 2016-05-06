@@ -1,8 +1,8 @@
 {
-  "name": "restest",
-  "version": "1.0.0",
-  "description": "Test environment for NodeJS RESTFul services",
-  "main": "index.js",
+  "name": "resttest",
+  "version": "0.0.1",
+  "description": "Sample of RESTFul with ExpressJS",
+  "main": "resttestd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,25 +13,38 @@
   "keywords": [
     "RESTFul",
     "NodeJS",
-    "ExpressJS"
+    "ExpressJS",
+    "sample",
+    "javascript",
+    "services"
   ],
   "author": "manuel.alfaro.sierra@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dokoto/restest/issues"
+    "url": "https://github.com/dokoto/restest.git/issues"
   },
   "homepage": "https://github.com/dokoto/restest",
   "devDependencies": {
     "body-parser": "^1.14.0",
+    "connect-mongodb-session": "^1.1.0",
     "express": "^4.13.3",
     "express-cluster": "0.0.4",
+    "express-session": "^1.13.0",
     "file-stream-rotator": "0.0.6",
+    "kerberos": "0.0.18",
     "log4js": "^0.6.27",
     "method-override": "^2.3.5",
+    "mongoose": "^4.3.5",
+    "node-apk-parser": "^0.2.3",
+    "passport": "^0.3.2",
+    "passport-google-oauth2": "^0.1.6",
     "q": "^1.4.1",
     "randomstring": "^1.1.0",
     "request": "^2.64.0",
     "shelljs": "^0.5.3",
     "underscore": "^1.8.3"
+  },
+  "dependencies": {
+    "kerberos": "0.0.18"
   }
 }

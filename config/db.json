@@ -1,0 +1,11 @@
+{
+  "db.mongo.restest.uri": {
+    "value": "mongodb://localhost:27017/restest"
+  },
+  "db.mongo.restest.collections.sessions": {
+    "value": "Sessions"
+  },
+  "db.mongo.restest.collections.characters": {
+    "value": "things"
+  }
+}
