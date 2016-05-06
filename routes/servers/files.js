@@ -3,6 +3,16 @@ var tools = {
   response: require('../../utils/response').create(),
   request: require('../../utils/request').create()
 };
+var multer  = require('multer');
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/files/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '_' + file.originalname);
+  }
+})
+var upload = multer({ "storage": storage });
 
 
 /*
@@ -10,14 +20,16 @@ var tools = {
  */
 router.get('/files/info', function(request, response) {
   var queryParams = tools.request.decodeQueryParams(request);
-  tools.response.standardWithValue(response, 'Hi, world', 'hi');
+  tools.response.standardWithValue(response, 'Hi, Im RESTEST.', 'RESTFUL for tests');
 });
 
 /*
- * POST  /gotchi/model
+ * POST  /servers/files/upload
  */
-router.post('/files/info', function(request, response) {
-  tools.response.standardWithValue(response, 200, 'Hi, world', 'hi');
+router.post('/files/upload', upload.array('upload[]', 10), function(request, response, next) {
+  // req.files is array of `photos` files
+  // req.body will contain the text fields, if there were any
+  tools.response.standardWithValue(response, 200, 'OK', request.files);
 });
 
 
