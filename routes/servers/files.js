@@ -20,7 +20,7 @@ var upload = multer({ "storage": storage });
  */
 router.get('/files/info', function(request, response) {
   var queryParams = tools.request.decodeQueryParams(request);
-  tools.response.standardWithValue(response, 'Hi, Im RESTEST.', 'RESTFUL for tests');
+  tools.response.standardWithValue(response, 200, 'OK', 'Hi, RESTFUL for tests');
 });
 
 /*
