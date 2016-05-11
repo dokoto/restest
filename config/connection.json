@@ -18,10 +18,10 @@
     "value": ""
   },
   "service.ip": {
-    "value": "127.0.0.1"
+    "value": "46.105.122.140"
   },
   "service.port": {
-    "value": 46969
+    "value": 5566
   },
   "service.url": {
     "value": {
